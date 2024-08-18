@@ -1,0 +1,329 @@
+%!TeX program = pdflatex
+% Geoff Boeing's Curriculum Vitae
+% Email: boeing@usc.edu
+% Web: https://geoffboeing.com/
+% Repo: https://github.com/gboeing/cv
+
+\documentclass[11pt,letterpaper]{report}
+
+\usepackage[T1]{fontenc} % output T1 font encoding (8-bit) for accented characters as single glyph
+\usepackage[strict,autostyle]{csquotes} % smart and nestable quote marks
+\usepackage[USenglish]{babel} % regionalize hyphens, quote marks, etc automatically
+\usepackage{microtype}% improve text appearance with kerning, etc
+\usepackage{datetime} % enable formatting of date output
+\usepackage{tabto}    % make nice tabbing
+\usepackage{hyperref} % enable hyperlinks and pdf metadata
+\usepackage{geometry} % manually set page margins
+\usepackage{enumitem} % enumerate with [resume] option
+\usepackage{titlesec} % allow custom section fonts
+\usepackage{setspace} % custom line spacing
+
+% what is your name?
+\newcommand{\myname}{Alisher Juzgenbayev}
+
+% select default typefaces
+\usepackage{ebgaramond} % document's serif typeface
+\usepackage{tgheros}    % document's sans serif typeface
+
+% how far to tab for list items with left-aligned date: different fonts need different widths
+\newcommand{\listtabwidth}{1.7cm}
+
+% define font to use as document's title
+\newcommand{\namefont}[1]{{\normalfont\bfseries\Huge{#1}}}
+
+% set section heading fonts and before/after spacing
+\SetTracking{encoding=*, family=\sfdefault}{30} % increase sans serif headings tracking
+\titleformat{\section}{\lsstyle\sffamily\small\bfseries\uppercase}{}{}{}{}
+\titlespacing{\section}{0pt}{30pt plus 4pt minus 4pt}{8pt plus 2pt minus 2pt}
+
+% set subsection heading fonts and before/after spacing
+\titleformat{\subsection}{\lsstyle\sffamily\footnotesize\bfseries}{}{}{}{}
+\titlespacing{\subsection}{0pt}{16pt plus 4pt minus 4pt}{4pt plus 2pt minus 2pt}
+
+% set page margins (assumes letter paper)
+\geometry{body={6.5in, 9.0in},
+    left=1.0in,
+    top=1.0in}
+
+% prevent paragraph indentation
+\setlength\parindent{0em}
+
+% set line spacing
+\setstretch{0.9}
+
+% define space between list items
+\newcommand{\listitemspace}{0.25em}
+
+% make unordered lists without bullets and use compact spacing
+\renewenvironment{itemize}
+{\begin{list}{}{\setlength{\leftmargin}{0em}
+                \setlength{\parskip}{0em}
+                \setlength{\itemsep}{\listitemspace}
+                \setlength{\parsep}{\listitemspace}}}
+{\end{list}}
+
+% make tabbed lists so content is left-aligned next to years
+\TabPositions{\listtabwidth}
+\newlist{tablist}{description}{3}
+\setlist[tablist]{leftmargin=\listtabwidth,
+    labelindent=0em,
+    topsep=0em,
+    partopsep=0em,
+    itemsep=\listitemspace,
+    parsep=\listitemspace,
+    font=\normalfont}
+
+% print only the month and year when using \today
+\newdateformat{monthyeardate}{\monthname[\THEMONTH] \THEYEAR}
+
+% define hyperlink appearance and metadata for pdf properties
+\hypersetup{
+    colorlinks  = true,
+    urlcolor    = black,
+    citecolor   = black,
+    linkcolor   = black,
+    pdfauthor   = {\myname},
+    pdfkeywords = {city planning, housing, street networks, transportation, urban design, urban informatics},
+    pdftitle    = {\myname: Curriculum Vitae},
+    pdfsubject  = {Curriculum Vitae},
+    pdfpagemode = UseNone
+}
+
+\begin{document}
+    \raggedright{}
+
+    % display your name as the document title
+    \namefont{\myname}
+
+    % affiliation and contact info blocks
+    \vspace{1em}
+    \begin{minipage}[t]{0.700\textwidth}
+        % current primary affiliation, left-aligned
+        Department of Political Science \\
+        Pritzker School of Law \\
+        Northwestern University
+    \end{minipage}
+    \begin{minipage}[t]{0.295\textwidth}
+        % contact info details, right-aligned
+        \flushright{}
+        \href{mailto:juzgenbayev@u.northwestern.edu}{juzgenbayev@u.northwestern.edu} \\
+        +1 773 349 0612 \\
+        \href{https://alisher.site}{alisher.site}
+    \end{minipage}
+
+
+    \section*{Education}
+
+    \begin{tablist}
+
+        \item[Ph.D.] \tab{}Political Science, Northwestern University, 2027 (expected)
+        \item[J.D.] \tab{}Pritzker School of Law, Northwestern University, 2027 (expected)
+        \item[M.A.]  \tab{}Political Science, Northwestern University, 2022
+        \item[B.S.]  \tab{}Political Science and International Relations, \textit{summa cum laude}, Nazarbayev University, 2020
+
+    \end{tablist}
+
+
+
+
+
+    \section*{Research Areas}
+
+    \begin{itemize}
+
+        \item Comparative Politics: Institutions, Non-Democratic Regimes, Comparative Courts, Former Soviet Union.
+        \item Law: Empirical Legal Research, Federal Jurisdiction, Civil Procedure, Constitutional Law, Consumer Law.
+        \item Methodology: Comparative Historical Analysis, Experiments, Open Science. 
+
+    \end{itemize}
+
+
+
+    \section*{Publications}
+
+   \subsection*{Journal Articles}
+
+   \begin{tablist}
+
+       
+
+        \item[2024] \tab{}Alisher Juzgenbayev. \enquote{Framing the Judiciary: Effects of Partisan, Procedural, and Populist Frames on Apex Court Perceptions in Czechia.} \textit{Journal of Law and Courts}, under review.
+
+      
+
+    \end{tablist}
+
+
+
+    \subsection*{Book Chapters}
+
+    \begin{tablist}
+
+        \item[2022] \tab{}A. Trochev, A. Juzgenbayev. \enquote{Instrumentalization of Constitutional Law in Central Asia.} In: \textit{Research Handbook on Law and Political Systems} (pp. 139--168), edited by R. M. Howard, K. A. Randazzo, and  R. A. Reid. Cheltenham, England:\ Edward Elgar. \href{https://doi.org/10.4337/9781800378346.00014}{doi: 10.4337/9781800378346.00014}
+
+    \end{tablist}
+
+
+
+    \section*{Invited Talks}
+
+   \begin{tablist}
+
+     \item[2024] \tab{}\enquote{In-group-motivated evaluations of domestic violence and the mitigating role of the highly visible events.} Models, Experiments, and Data Workshop. Madison, Wisconsin. (With Valeriia Umanets, Yulia Khalikova, and Marcy Shieh). Sep. 13.
+
+    \end{tablist}
+
+    
+
+
+    \section*{Conference Activity}
+
+    
+
+    \subsection*{Conference Papers Presented}
+
+    \begin{tablist}
+
+        \item[2024] \tab{}A. Juzgenbayev. \enquote{Populist Frames and Judicial Legitimacy: Survey Experiment in Czech Republic.} European Consortium For Political Research General Conference.  Prague, Czechia. Sep 4--8. 
+
+        \item[2022] \tab{}A. Juzgenbayev and A. Trochev. \enquote{Clientelism, Constitutional Courts, and High Politics in Central Asian Countries.} Association for Slavic, East European, and Eurasian Studies Convention. Chicago, Illinois. Nov 10--13.
+
+    \end{tablist}
+
+
+
+    \section*{Grants and Awards}
+
+
+
+    \subsection*{Competitive Grants and Fellowships}
+
+    \begin{tablist}
+
+
+        \item[2023] \tab{}Northwestern University, Graduate Research Grant (\$3,000)
+
+        \item[2023] \tab{}Buffett Institute, International Conference Travel Grant (\$1,000)
+        \item[2021] \tab{}Harvard Ukrainian Studies Institute, Summer Institute Scholarship (\$1,600)
+        \item[2021] \tab{}Radulovacki Slavic Studies, Ukrainian Study Grant (\$5,200)
+        \item[2019] \tab{}Visiting International Students Program at University of Wisconsin-Madison (\$14500)
+
+    \end{tablist}
+
+    \subsection*{Awards and Honors}
+
+    \begin{tablist}
+
+        \item[2020] \tab{}European Universities Debating Championship, Semi-Finalist. 
+    \end{tablist}
+
+    \section*{Teaching}
+
+    \subsection*{Teaching Assistance}
+
+    \begin{tablist}
+        
+
+        
+        \item[2024--]      \tab{}Civil Procedure; Introduction to Comparative Politics.
+        \item[2023--24]    \tab{}Civil Procedure; Property.
+        \item[2021--22]    \tab{}Law in Political Arena; International Law and Politics; Global Development.
+        \item[2017--18]    \tab{}Quantitative Methods in Political Science; International Relations (Academic Writing).
+
+    \end{tablist}
+
+
+
+    \section*{Leadership \& Service}
+
+
+
+    \subsection*{Academic Journal Editorship}
+
+    \begin{tablist}
+
+        \item[2023--24]  \tab{}\textit{Northwestern University Law Review}, Senior Empirical Editor, Vol. 119. 
+
+
+    \end{tablist}
+
+   
+
+    \subsection*{Service to the University}
+
+    \begin{tablist}
+        \item[2024--]   \tab{}Northwestern Political Science Department, Comparative Politics Workshop Graduate Coordinator.
+        
+    \end{tablist}
+
+
+    \subsection*{Leadership}
+
+    \begin{tablist}
+        \item[2023--24] \tab{}Pritzker School of Law, American Constitution Society, VP for External Affairs.
+        \item[2023--24] \tab{}Pritzker School of Law, ACLU, VP for Activism.
+        \item[2019] \tab{} Nazarbayev University, Association of Political Science Students, President.
+        \item[2017--19] \tab{} Nazarbayev University, Student Debate Society, Board Member \& Coordinator.
+    \end{tablist}
+
+
+   
+
+
+
+    \section*{Peer Review}
+
+
+    \begin{itemize}
+
+        \item \textit{Journal of Law and Courts}
+      
+
+    \end{itemize}
+
+  
+
+
+
+    \section*{Memberships}
+
+    \begin{itemize}
+
+        \item Federal Bar Association
+        \item American Immigration Lawyers Association
+        \item American Political Science Association
+
+    \end{itemize}
+
+
+
+
+
+
+ 
+
+    \section*{Professional Employment}
+
+    \begin{tablist}
+
+        \item[2024] \tab{}Legal Aid Chicago, Consumer Practice Group. Summer Intern.
+        \item[2023] \tab{}United States District Court for the Northern District of Illinois. Judicial Extern.
+ 
+
+    \end{tablist}
+
+
+    \section*{Language and Skills}
+
+    \subsection*{Languages}
+        Russian (Native); Ukrainian (Reading Knowledge); Kazakh (Intermediate).
+    \subsection*{Computing}
+        \LaTeX, R, Qualtrics.
+    
+    % display today's date as Month Year after a vertical space below the end of the text
+    \begin{center}
+        \vfill
+        Updated \monthyeardate\today
+    \end{center}
+
+\end{document}
